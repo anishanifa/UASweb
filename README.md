@@ -1,11 +1,11 @@
-## UAS Pemrograman Web II - STI4132
+# UAS Pemrograman Web II - STI4132
 
-## Anggota
+### Anggota
 1. Anis Hanifa      (2010817320010)
 2. Salsabila Syifa  (2010817320004)
 
-## Tema Sistem Informasi
+### Tema Sistem Informasi
 Astronomi
 
-## Framework
+### Framework
 Bootstrap (CSS Framework)
