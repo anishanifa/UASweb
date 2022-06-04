@@ -8,7 +8,7 @@
 * Astronomi
 
 ### Framework
-* Bootstrap (CSS Framework)
+* Bootstrap (HTML-CSS Framework)
 
 ### Setup
 * XAMPP
