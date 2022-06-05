@@ -13,3 +13,9 @@
 ### Setup
 * XAMPP
 * MySQL
+* Visual Studio Code
+
+### Data Source
+* NASA
+* Wikipedia
+* Several blog about planets, stars, and galaxies
