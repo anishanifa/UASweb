@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 10:03 AM
+-- Generation Time: Jun 06, 2022 at 11:40 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bintang` (
   `id_bintang` int(11) NOT NULL,
-  `data_image` blob NOT NULL,
+  `data_image` blob DEFAULT NULL,
   `nama_konstelasi` varchar(250) NOT NULL,
   `nama_khas` varchar(250) NOT NULL,
   `nama_modern` varchar(250) NOT NULL
@@ -54,7 +54,7 @@ INSERT INTO `bintang` (`id_bintang`, `data_image`, `nama_konstelasi`, `nama_khas
 
 CREATE TABLE `galaksi` (
   `id_galaksi` int(11) NOT NULL,
-  `data_image` blob NOT NULL,
+  `data_image` blob DEFAULT NULL,
   `nama_galaksi` varchar(250) NOT NULL,
   `nama_konstelasi` varchar(250) NOT NULL,
   `asal_nama` varchar(250) NOT NULL
@@ -80,8 +80,11 @@ INSERT INTO `galaksi` (`id_galaksi`, `data_image`, `nama_galaksi`, `nama_konstel
 CREATE TABLE `log_info` (
   `id_log` int(11) NOT NULL,
   `id_member` int(11) NOT NULL,
-  `login` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `logout` date NOT NULL
+  `username` varchar(250) NOT NULL,
+  `logip` binary(20) NOT NULL,
+  `logintime` timestamp NOT NULL DEFAULT current_timestamp(),
+  `logout` varchar(250) NOT NULL,
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -114,7 +117,7 @@ INSERT INTO `member` (`id_member`, `nama_member`, `username`, `email`, `password
 
 CREATE TABLE `planet` (
   `id_planet` int(11) NOT NULL,
-  `data_image` blob NOT NULL,
+  `data_image` blob DEFAULT NULL,
   `nama_planet` varchar(250) NOT NULL,
   `periode_revolusi` varchar(250) NOT NULL,
   `periode_rotasi` varchar(250) NOT NULL
@@ -139,15 +142,13 @@ INSERT INTO `planet` (`id_planet`, `data_image`, `nama_planet`, `periode_revolus
 -- Indexes for table `bintang`
 --
 ALTER TABLE `bintang`
-  ADD PRIMARY KEY (`id_bintang`),
-  ADD UNIQUE KEY `nama_konstelasi` (`nama_konstelasi`);
+  ADD PRIMARY KEY (`id_bintang`);
 
 --
 -- Indexes for table `galaksi`
 --
 ALTER TABLE `galaksi`
-  ADD PRIMARY KEY (`id_galaksi`),
-  ADD KEY `nama_konstelasi` (`nama_konstelasi`);
+  ADD PRIMARY KEY (`id_galaksi`);
 
 --
 -- Indexes for table `log_info`
