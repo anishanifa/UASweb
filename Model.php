@@ -55,16 +55,16 @@
             return $result;
         }
 
-        public function setPlanet($image, $planetarium, $revolusi, $rotasi)
+        public function setPlanet($planetarium, $revolusi, $rotasi)
         {
-            $sql = "INSERT INTO planet (data_image, nama_planet, periode_revolusi, periode_rotasi) VALUES ('$image', '$planetarium', '$revolusi', '$rotasi')";
+            $sql = "INSERT INTO planet (nama_planet, periode_revolusi, periode_rotasi) VALUES ('$planetarium', '$revolusi', '$rotasi')";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function editPlanet($id, $image, $planetarium, $revolusi, $rotasi)
+        public function editPlanet($id, $planetarium, $revolusi, $rotasi)
         {
-            $sql = "UPDATE planet SET data_image = '$image', nama_planet = '$planetarium', periode_revolusi = '$revolusi', periode_rotasi = '$rotas' WHERE id_planet = '$id'";
+            $sql = "UPDATE planet SET nama_planet = '$planetarium', periode_revolusi = '$revolusi', periode_rotasi = '$rotasi' WHERE id_planet = '$id'";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
@@ -92,16 +92,16 @@
             return $result;
         }
 
-        public function setBintang($image, $konstelasi, $designation, $modern)
+        public function setBintang($konstelasi, $designation, $modern)
         {
-            $sql = "INSERT INTO bintang (data_image, nama_konstelasi, nama_khas, nama_modern) VALUES ('$image', '$konstelasi', '$designation', '$modern')";
+            $sql = "INSERT INTO bintang (nama_konstelasi, nama_khas, nama_modern) VALUES ('$konstelasi', '$designation', '$modern')";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function editBintang($id, $image, $konstelasi, $designation, $modern)
+        public function editBintang($id, $konstelasi, $designation, $modern)
         {
-            $sql = "UPDATE bintang SET data_image = '$image', nama_konstelasi = '$konstelasi', nama_khas = '$designation', nama_modern = '$modern' WHERE id_bintang = '$id'";
+            $sql = "UPDATE bintang SET nama_konstelasi = '$konstelasi', nama_khas = '$designation', nama_modern = '$modern' WHERE id_bintang = '$id'";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
@@ -128,16 +128,16 @@
             return $result;
         }
 
-        public function setGalaksi($image, $galaxy, $constellation, $origin)
+        public function setGalaksi($galaxy, $constellation, $origin)
         {
-            $sql = "INSERT INTO galaksi (data_image, nama_galaksi, nama_kostelasi, asal_nama) VALUES ('$image', '$galaxy', '$constellation', '$origin')";
+            $sql = "INSERT INTO galaksi (nama_galaksi, nama_kostelasi, asal_nama) VALUES ('$galaxy', '$constellation', '$origin')";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function editGalaksi($id, $image, $galaxy, $constellation, $origin)
+        public function editGalaksi($id, $galaxy, $constellation, $origin)
         {
-            $sql = "UPDATE galaksi SET data_image = '$image', nama_galaksi = '$galaxy', nama_kostelasi = '$constellation', asal_nama = '$origin' WHERE id_galaksi = '$id'";
+            $sql = "UPDATE galaksi SET nama_galaksi = '$galaxy', nama_kostelasi = '$constellation', asal_nama = '$origin' WHERE id_galaksi = '$id'";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
