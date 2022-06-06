@@ -45,7 +45,7 @@
 			
               <div class="panel" id="home">
                 <div class="col_380 float_l">
-                  <h2>Welcome to Gala Astro</h2>
+                  <h2>Selamat Datang di Gala Astro</h2>
                   <img src="images/tooplate_image_01.jpg" alt="Image 01" class="image_wrapper" />
                   <p> </p>
                   <p><em>Gala Astro adalah situs web yang menyediakan informasi seputar planet, bintang, dan galaksi. Pengunjung dapat login melalui portal dan menikmati fitur-fitur yang disediakan.</em></p>

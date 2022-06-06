@@ -10,7 +10,7 @@ if (isset($_SESSION['username'])):
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Galaxy Website Template</title>
+<title>Gala Astro Website</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="css/tooplate_style.css" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@ if (isset($_SESSION['username'])):
    	<div id="tooplate_wrapper">
     	
         <div id="tooplate_header">
-            <div id="site_title"><h1><a href="#">Galaxy Template</a></h1></div>
+            <div id="site_title"><h1><a href="#">Gala Astro</a></h1></div>
             
             <div id="menu">
                 <ul class="navigation">
@@ -39,7 +39,7 @@ if (isset($_SESSION['username'])):
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Login</a></li>
                 </ul>    	
             </div> <!-- end of tooplate_menu -->
 			
@@ -52,19 +52,17 @@ if (isset($_SESSION['username'])):
 			
               <div class="panel" id="home">
                 <div class="col_380 float_l">
-                  <h2>Welcome to Galaxy</h2>
+                  <h2>Welcome to Gala Astro</h2>
                   <img src="images/tooplate_image_01.jpg" alt="Image 01" class="image_wrapper" />
-                  <p><em>Nullam at erat ipsum, quis tincidunt mauris. Nunc sit amet sapien eget eros iaculis hendrerit quis a enim. Vestibulum at leo ante, vel auctor velit.</em></p>
-                  <p><a href="http://www.tooplate.com/view/2021-galaxy">Galaxy</a> is <a rel="nofollow" href="http://www.tooplate.com">free website template</a> for everyone. You may edit and apply this template for any purpose. Credits go to <a rel="nofollow" href="http://www.photovaco.com">Free Photos</a> for photos and <a rel="nofollow" href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249" target="_blank">jwloh</a> for Aquaticus.Social social icons and <a rel="nofollow" href="http://www.icojoy.com">icojoy.com</a> for icons. Nunc posuere tristique tempor.</p>
+                  <p> </p>
+                  <p><em>Gala Astro adalah situs web yang menyediakan informasi seputar planet, bintang, dan galaksi. Pengunjung dapat login melalui portal dan menikmati fitur-fitur yang disediakan.</em></p>
                 </div>
                 <div class="col_270 float_r">
                   <h2>Our Services</h2>
                   <ul class="service_list">
-                    <li><a href="#" class="service_one">Morbi luctus vitae cursus</a></li>
-                    <li><a href="#" class="service_two">Pellentesq tris senectus</a></li>
-                    <li><a href="#" class="service_three">Duis at commodo molestie</a></li>
-                    <li><a href="#" class="service_four">In aliquet in libero</a></li>
-                    <li><a href="#" class="service_five">Maecenas ut pretium</a></li>
+                    <li><a href="#" class="service_one">Daftar Planet</a></li>
+                    <li><a href="#" class="service_two">Daftar Bintang</a></li>
+                    <li><a href="#" class="service_three">Daftar Galaksi</a></li>
                   </ul>
                 </div>
               </div>
@@ -138,7 +136,7 @@ if (isset($_SESSION['username'])):
 			        <!-- end of Gallery -->
 			  
               <div class="panel" id="contact">
-                <h1>Contact Us</h1>
+                <h1>Portal Gala</h1>
                 
                 <div class="cleaner_h10"></div>
                 <div class="col_380 float_l">
@@ -191,7 +189,7 @@ if (isset($_SESSION['username'])):
             
             <div id="footer_left">
 				
-            	Copyright © 2048 <a href="#">Company Name</a><br />
+            	Copyright © 2022 <a href="#">Asteero</a><br />
             	<!-- Galaxy by <a rel="nofollow" href="http://www.tooplate.com">Templates</a><br /> -->
                 
             </div>
