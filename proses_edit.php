@@ -28,6 +28,19 @@ if ($jenis_edit == "galaksi"){
     } else {
         echo "<script>alert('Data gagal diedit!');</script>";
     }
-} 
+}
+if ($jenis_edit == "planet"){
+    $id = $_POST['id'];
+    $nama_planet = $_POST['nama_planet'];
+    $periode_revolusi = $_POST['periode_revolusi'];
+    $periode_rotasi = $_POST['periode_rotasi'];
+
+    $query = mysqli_query($host,"UPDATE planet SET nama_planet='$nama_planet', periode_revolusi='$periode_revolusi', periode_rotasi='$aperiode_rotasi' WHERE id_planet='$id'") or die(mysqli_error($host));
+    if($query) {
+        echo "<script>alert('Data berhasil diedit!'); window.location='tabel_planet.php';</script>";
+    } else {
+        echo "<script>alert('Data gagal diedit!');</script>";
+    }
+}
 
 ?>

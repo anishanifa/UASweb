@@ -22,4 +22,14 @@ if ($jenis_hapus == "galaksi"){
     }
 }
 
+if ($jenis_hapus == "planet"){
+    $id = $_GET['id'];
+    $query = mysqli_query($host,"DELETE FROM planet WHERE id_planet = '$id'") or die(mysqli_error($host));
+    if($query) {
+        echo "<script>alert('Data berhasil dihapus!'); window.location='tabel_planet.php';</script>";
+    } else {
+        echo "<script>alert('Data gagal dihapus'); window.location='tabel_planet.php';</script>";
+    }
+}
+
 ?>
