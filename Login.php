@@ -47,6 +47,13 @@ if (!isset($_SESSION['username'])) :
                             </div>
             
                             <button name="masuk" class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                            
+                            <div>
+                            <br>
+                            <br>
+                            <br>
+                            <p class="text-white-50 mb-5">Kembali ke <a href="index.php">Halaman Utama</a></p>
+                            </div>
                         </form>
                     </div>
                   </div>
