@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2022 at 06:13 PM
+-- Generation Time: Jun 06, 2022 at 07:47 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bintang` (
   `id_bintang` int(11) NOT NULL,
+  `data_image` blob NOT NULL,
   `nama_konstelasi` varchar(250) NOT NULL,
   `nama_khas` varchar(250) NOT NULL,
   `nama_modern` varchar(250) NOT NULL
@@ -42,6 +43,7 @@ CREATE TABLE `bintang` (
 
 CREATE TABLE `galaksi` (
   `id_galaksi` int(11) NOT NULL,
+  `data_image` blob NOT NULL,
   `nama_galaksi` varchar(250) NOT NULL,
   `nama_konstelasi` varchar(250) NOT NULL,
   `asal_nama` varchar(250) NOT NULL
@@ -83,6 +85,7 @@ CREATE TABLE `member` (
 
 CREATE TABLE `planet` (
   `id_planet` int(11) NOT NULL,
+  `data_image` blob NOT NULL,
   `nama_planet` varchar(250) NOT NULL,
   `periode_revolusi` varchar(250) NOT NULL,
   `periode_rotasi` varchar(250) NOT NULL
