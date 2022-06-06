@@ -8,4 +8,28 @@
 * Astronomi
 
 ### Framework
-* Bootstrap
+* Bootstrap - CSS, PHP, and Javascript Framework
+
+### Fitur
+* Login
+* Browse
+* Read
+* Edit
+* Add
+* Delete
+
+### About Website
+* Memberikan informasi seputar astronomi
+* Menyediakan data planet
+* Menyediakan data bintang
+* Menyediakan data galaksi
+
+### Setup
+* XAMPP
+* MySQL
+* Visual Studio Code
+
+### Data Source
+* NASA
+* Wikipedia
+* Several blog about planets, stars, and galaxies
