@@ -18,16 +18,16 @@
             return $result;
         }
 
-        public function setMember($nama, $nomor, $alamat, $password, $tgl_mendaftar, $tgl_terakhir_bayar)
+        public function setMember($nama, $username, $email, $password)
         {
-            $sql = "INSERT INTO member (nama_member, nomor_member, password , alamat, tgl_mendaftar, tgl_terakhir_bayar) VALUES ('$nama', '$nomor', '$password', '$alamat', '$tgl_mendaftar', '$tgl_terakhir_bayar')";
+            $sql = "INSERT INTO member (nama_member, username, email, password) VALUES ('$nama', '$username', '$email', '$password')";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function editMember($id, $nama, $nomor, $password, $alamat, $tgl_mendaftar, $tgl_terakhir_bayar)
+        public function editMember($id, $nama, $username, $email, $password)
         {
-            $sql = "UPDATE member SET nama_member = '$nama', nomor_member = '$nomor', password = '$password', alamat = '$alamat', tgl_mendaftar = '$tgl_mendaftar', tgl_terakhir_bayar = '$tgl_terakhir_bayar' WHERE id_member = '$id'";
+            $sql = "UPDATE member SET nama_member = '$nama', username = '$username', email = '$email', password = '$password' WHERE id_member = '$id'";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
@@ -40,77 +40,117 @@
         }
 
 
-        //BUKU//
-        public function getBuku()
+        // PLANET //
+        public function getPlanet()
         {
-            $sql = "SELECT * FROM buku";
+            $sql = "SELECT * FROM planet";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function deleteBuku($id)
+        public function deletePlanet($id)
         {
-            $sql = "DELETE FROM buku WHERE id_buku = '$id'";
+            $sql = "DELETE FROM planet WHERE id_planet = '$id'";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function setBuku($judul, $penulis, $penerbit, $tahunTerbit)
+        public function setPlanet($image, $planetarium, $revolusi, $rotasi)
         {
-            $sql = "INSERT INTO buku (judul_buku, penulis, penerbit, tahun_terbit) VALUES ('$judul', '$penulis', '$penerbit', '$tahunTerbit')";
+            $sql = "INSERT INTO planet (data_image, nama_planet, periode_revolusi, periode_rotasi) VALUES ('$image', '$planetarium', '$revolusi', '$rotasi')";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function editBuku($id, $judul, $penulis, $penerbit, $tahunTerbit)
+        public function editPlanet($id, $image, $planetarium, $revolusi, $rotasi)
         {
-            $sql = "UPDATE buku SET judul_buku = '$judul', penulis = '$penulis', penerbit = '$penerbit', tahun_terbit = '$tahunTerbit' WHERE id_buku = '$id'";
+            $sql = "UPDATE planet SET data_image = '$image', nama_planet = '$planetarium', periode_revolusi = '$revolusi', periode_rotasi = '$rotas' WHERE id_planet = '$id'";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
-        public function getBukuById($id)
+        public function getPlanetById($id)
         {
-            $sql = "SELECT * FROM buku WHERE id_buku = '$id'";
+            $sql = "SELECT * FROM planet WHERE id_planet = '$id'";
             $result = mysqli_query($GLOBALS['koneksi'], $sql);
             return $result;
         }
 
+
+        // BINTANG //
+        public function getBintang()
+        {
+            $sql = "SELECT * FROM bintang";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function deleteBintang($id)
+        {
+            $sql = "DELETE FROM bintang WHERE id_bintang = '$id'";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function setBintang($image, $konstelasi, $designation, $modern)
+        {
+            $sql = "INSERT INTO bintang (data_image, nama_konstelasi, nama_khas, nama_modern) VALUES ('$image', '$konstelasi', '$designation', '$modern')";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function editBintang($id, $image, $konstelasi, $designation, $modern)
+        {
+            $sql = "UPDATE bintang SET data_image = '$image', nama_konstelasi = '$konstelasi', nama_khas = '$designation', nama_modern = '$modern' WHERE id_bintang = '$id'";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function getBintangById($id)
+        {
+            $sql = "SELECT * FROM bintang WHERE id_bintang = '$id'";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        // GALAKSI //
+        public function getGalaksi()
+        {
+            $sql = "SELECT * FROM galaksi";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function deleteGalaksi($id)
+        {
+            $sql = "DELETE FROM galaksi WHERE id_galaksi = '$id'";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function setGalaksi($image, $galaxy, $constellation, $origin)
+        {
+            $sql = "INSERT INTO galaksi (data_image, nama_galaksi, nama_kostelasi, asal_nama) VALUES ('$image', '$galaxy', '$constellation', '$origin')";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function editGalaksi($id, $image, $galaxy, $constellation, $origin)
+        {
+            $sql = "UPDATE galaksi SET data_image = '$image', nama_galaksi = '$galaxy', nama_kostelasi = '$constellation', asal_nama = '$origin' WHERE id_galaksi = '$id'";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+        public function getGalaksiById($id)
+        {
+            $sql = "SELECT * FROM galaksi WHERE id_galaksi = '$id'";
+            $result = mysqli_query($GLOBALS['koneksi'], $sql);
+            return $result;
+        }
+
+
+        // LOG //
         
-        //PEMINJAMAN//
-        public function getPeminjaman()
-        {
-            $sql = "SELECT * FROM peminjaman";
-            $result = mysqli_query($GLOBALS['koneksi'], $sql);
-            return $result;
-        }
-
-        public function deletePeminjaman($id)
-        {
-            $sql = "DELETE FROM peminjaman WHERE id_peminjaman = '$id'";
-            $result = mysqli_query($GLOBALS['koneksi'], $sql);
-            return $result;
-        }
-
-        public function setPeminjaman($tglPinjam, $tglKembali)
-        {
-            $sql = "INSERT INTO peminjaman (tgl_pinjam, tgl_kembali) VALUES ('$tglPinjam', '$tglKembali')";
-            $result = mysqli_query($GLOBALS['koneksi'], $sql);
-            return $result;
-        }
-
-        public function editPeminjaman($id, $tglPinjam, $tglKembali)
-        {
-            $sql = "UPDATE peminjaman SET tgl_pinjam = '$tglPinjam', tgl_kembali = '$tglKembali' WHERE id_peminjaman = '$id'";
-            $result = mysqli_query($GLOBALS['koneksi'], $sql);
-            return $result;
-        }
-
-        public function getPeminjamanById($id)
-        {
-            $sql = "SELECT * FROM peminjaman WHERE id_peminjaman = '$id'";
-            $result = mysqli_query($GLOBALS['koneksi'], $sql);
-            return $result;
-        }
     }
 ?>
